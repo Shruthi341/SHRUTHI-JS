@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap//dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript" src="../src/scripts/input-demo-boostrap.js"></script>
+
+</head>
+
+<body class="container-fluid">
+    
+    <button class="btn btn-primary mt-1" onclick="getRegisterForm() " id="initialButton">Register Product</button>
+
+    <div id="RegisterContainer" style="display: none;">
+        <h3>Register Form</h3>
+        <div class="form-group col-md-4">
+            Product Name: <input type="text" id="Name" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+            Price: <input type="number" id="Price" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+            City:
+            <select id="City" class="form-control">
+                <option>Delhi</option>
+                <option>Hyderabad</option>
+                <option>Mumbai</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            Stock: <br>
+            <input type="checkbox" id="Stock" class="form-check-input"> Available
+        </div>
+        <button class="btn btn-success" onclick="RegisterClick()">Register</button>
+    </div>
+
+
+    <div id="DetailsContainer" style="display: none;">
+        <h3>Product Details</h3>
+        <b>Name : </b><span id="lblName"></span><br>
+        <b>Price : </b><span id="lblPrice"></span><br>
+        <b>City : </b><span id="lblCity"></span><br>
+        <b>Stock : </b><span id="lblStock"></span><br>
+        <button class="btn btn-warning" onclick="onEdit()">Edit</button>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
