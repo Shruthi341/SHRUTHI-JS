@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        .error-style{
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript">
+        function RegisterClick(){
+            var userName = document.getElementById("userName").value;
+            var userError = document.getElementById("userError");
+
+            if(userName == ""){
+                //userError.innerHTML = "Required*".fontcolor('red').fontsize(2).italics();
+                
+                userError.innerHTML = "Required*";
+                userError.className = 'error-style';
+                // userError.style.color = 'red';
+                // userError.style.fontSize = '2';
+            }
+            else{
+                document.write("Registered Successfully!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="userName"></dd>
+        <dd id="userError"></dd>
+    </dl>
+    <button onclick="RegisterClick()">Register</button>
+    
+</body>
+</html>

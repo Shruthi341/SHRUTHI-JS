@@ -1,0 +1,15 @@
+<script>
+    var username = prompt("Enter Username");
+    var inputField = prompt("Enter Type","Email|Password")
+    var login =
+        `
+            <h2>Login Info</h2>
+            <dl>
+               Username: <dt>${username}</dt>
+               <dt><input type=${inputField}></dt>
+            </dl>
+
+        `;
+
+    document.write(login);
+</script>
