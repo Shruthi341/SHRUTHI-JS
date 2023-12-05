@@ -1,0 +1,19 @@
+<script>
+    var values = [19,"John",true];
+    document.write("<h1>Property : Value</h1><br>");
+    for(var property in values){
+        document.write(`[${property}]: ${values[property]}<br>`)
+    }
+
+    document.write("<h1>Type of Property</h1><br>");
+    for(var property in values){
+        document.write(`[${property}]: ${typeof property}<br>`)
+    }
+
+    document.write("<h1>Type of Values</h1><br>");
+    for(var property in values){
+        document.write(`${values[property]}: ${typeof values[property]}<br>`)
+    }
+
+    document.write(values["0"]);
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Pattern Match</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var regExp = / /;
+        function OnCountryChange(){
+            var countryName = document.getElementById("lstCountries").value;
+            var flagImg = document.getElementById("flag");
+            var mobileNo = document.getElementById("txtMobile");
+
+            if(countryName == "INDIA"){
+                flagImg.src ="../../../src/images/India.jpg";
+                mobileNo.placeholder = "Eg: +91XXXXXXXXXX";
+                regExp = /\+91\d{10}/;
+            } else if(countryName == "US"){
+                flagImg.src ="../../../src/images/Usa.jpg";
+                mobileNo.placeholder = "Eg: +(1)-(213)-XXX-XXXX";
+                regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+
+            } else if(countryName == "UK"){
+                flagImg.src ="../../../src/images/UK.jpg";
+                mobileNo.placeholder = "Eg: +(44)(XX) XXXX XXXX";
+                regExp = /\+\(44\)\(\d{2}\)\s\d{4}\s\d{4}/;
+            }
+
+        }
+
+        function VerifyMobile(){
+            console.log("Verifying Mobile")
+            var mobile = document.getElementById("txtMobile").value;
+            var mobileError = document.getElementById("mobileError");
+            if(mobile.match(regExp)){
+                console.log("Matched")
+                mobileError.innerHTML = "";
+            }else{
+                console.log("Not Matched")
+                mobileError.innerHTML = "Invalid Mobile Number".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2>Verify Mobile</h2>
+    <dl class="w-25">
+        <dt>Your Country</dt>
+        <dd class="input-group">
+            <select id="lstCountries" class="form-select" onchange="OnCountryChange()">
+                <option>INDIA</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+            <img width="80" height="40" class="input-group-text" id="flag" alt="" src ="../../../src/images/India.jpg">
+        </dd>
+        <dt>Your Mobile</dt>
+        <dd>
+            <input type="text" class="form-control" id="txtMobile" placeholder = "Eg: +91XXXXXXXXXX" onblur="VerifyMobile()">
+        </dd>
+        <dd id="mobileError"></dd>
+    </dl>
+    <button class="btn btn-primary">Register</button>
+</body>
+</html>

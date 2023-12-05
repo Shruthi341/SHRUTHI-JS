@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+<script type="text/javascript">
+
+    function VerifyName(){
+        var userName = document.getElementById("UserName").value;
+        var userError = document.getElementById("UserError");
+        if(userName.length < 4){
+            userError.innerHTML = "Minimun 4 chars Required*".fontcolor('red').fontsize(1);
+        }
+        else if(userName.length > 10){
+            userError.innerHTML = "Maximum 10 char Required*".fontcolor('red').fontsize(1);
+        }
+        else{
+            userError.innerHTML ="";
+        }
+
+        if(userName == ""){
+            userError.innerHTML = "Required**".fontcolor('red').fontsize(1);
+        }
+    }
+
+    function SubmitClick(){
+        var userName = document.getElementById("UserName").value;
+        var userError = document.getElementById("UserError");
+        if(userName == ""){
+            userError.innerHTML = "Required**".fontcolor('red').fontsize(1);
+        }else{
+            document.write("Registered Successfully");
+        }
+    }
+</script>
+<body>
+    <div>User Name</div>
+    <div><input type="text" id="UserName" onkeyup="VerifyName()"></div>
+    <div id="UserError"></div>
+    <button onclick="SubmitClick()">Submit</button>
+</body>
+</html>
