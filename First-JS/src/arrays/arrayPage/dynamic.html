@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Array Examples</title>
+    <script>
+        var categories = ["All","Electronics","Footwear","Fashion"];
+        function addOption(){
+           document.querySelector('select').innerHTML = "";
+           for(var item of categories){
+            var option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            document.querySelector('select').append(option);
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addOption()">
+        Add Option
+    </button>
+
+    <select>
+
+    </select>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript" src="../arrayScript/arrayManipulation.js"></script>
+</head>
+<body class="container-fuild" onload="bodyLoad()">
+    <h2>Array Manipulation</h2>
+    <div class="input-group w-50">
+        <span class="input-group-text">New City</span>
+        <input type="text" id="newCity" class="form-control">
+        <button class="btn btn-primary" onclick="addNewCity()">Add New</button>
+    </div>
+    
+    <div>
+        <label class="form-label">Your Cities</label>
+        <div>
+            <div class="mt-2 mb-2">
+                <button class="btn btn-success" onclick="citiesAscOrder()">
+                    <span class="bi bi-sort-alpha-down"></span>
+                </button>
+                <button class="btn btn-success" onclick="citiesDescOrder()">
+                    <span class="bi bi-sort-alpha-up"></span>
+                </button>
+            </div>
+            <select class="form-select w-25" size="3" id="listCities">
+                <!-- With size Select is no more a dropdown, Now its list box -->
+
+            </select>
+            <label class="form-label" id="lblCount"></label>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-danger" onclick="removeSelectedCity()"><span class="bi bi-trash-fill"></span>Remove City</button>
+            <button class="btn btn-danger" onclick="removeAllCities()">Clear All</button>
+        </div>
+    </div>
+    
+</body>
+</html>

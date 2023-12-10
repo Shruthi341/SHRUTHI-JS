@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Array Examples</title>
+    <script>
+        function addClick(){
+           var pic = document.createElement("img");
+           pic.width = "150";
+           pic.height = "150";
+           pic.border = "2";
+           pic.src = "../../images/profile.jpg"
+
+          document.getElementById("container").appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addClick()">
+        Add Image
+    </button>
+    <div id="container">
+
+    </div>
+</body>
+</html>
