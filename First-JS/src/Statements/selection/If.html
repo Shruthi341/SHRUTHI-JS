@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Statements</title>
+    <script src="IfScript"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="Card" onblur="verifyCardNumber()"></dd>
+            <dt>CVV</dt>
+            <dd><input type="text" id="Cvv" size="4" disabled onblur="verifyCardCvv()"></dd>
+            <dt>Expiry</dt>
+            <dd>
+                <select id="Expiry" disabled  onchange="verifyCardExpiry()">
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                </select>
+            </dd>
+        </dl>
+        <button id="btnPay" disabled>Pay</button>
+    </fieldset>
+</body>
+</html>

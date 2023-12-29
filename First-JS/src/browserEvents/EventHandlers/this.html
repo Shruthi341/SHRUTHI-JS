@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="alert(this.innerHTML)">Click me</button>
+    <button id="buttonID" onclick="clicked(this)">Click me</button> -->
+    <button id="btnId">Click me</button>
+    <script>
+        document.getElementById("btnId").addEventListener('click',function(){
+            alert(`Clicked On ${this.id}`);
+        });
+    </script>
+    <!-- <script>
+        function clicked(button){
+            alert(`Clicked On ${button.id}`);
+        }
+    </script> -->
+</body>
+</html>

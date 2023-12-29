@@ -1,0 +1,6 @@
+<input type="button" id="elem" onclick="alert('Before')" value="Click me">
+<script>
+  elem.onclick = function() { // overwrites the existing handler
+    alert('After'); // only this will be shown
+  };
+</script>

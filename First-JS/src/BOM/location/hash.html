@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Example</title>
+    <script>
+        function getHash() {
+            // Get the current hash value
+            var currentHash = window.location.hash;
+
+            // Display the current hash in the console
+            console.log("Current Hash: " + currentHash);
+        }
+
+        function setHash() {
+            // Set a new hash value
+            var newHashValue = "example";
+            window.location.hash = newHashValue;
+
+            // Display the updated hash in the console
+            console.log("Updated Hash: " + window.location.hash);
+        }
+    </script>
+</head>
+<body>
+    <h3>Hash Example</h3>
+
+    <button onclick="getHash()">Get Current Hash</button>
+    <button onclick="setHash()">Set Hash to 'example'</button>
+</body>
+</html>

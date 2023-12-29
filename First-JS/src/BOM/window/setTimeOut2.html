@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout Example</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+        // Display the initial message without using setTimeout
+        document.body.innerHTML += "ON TIME MESSAGE <br>";
+
+        // Display a new message after a delay of 3 seconds using setTimeout
+        setTimeout(function() {
+            document.body.innerHTML += "New message after 3 seconds";
+        }, 3000);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

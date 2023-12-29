@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Example</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p class="highlight">This is a paragraph.</p>
+    <p>This is XYZ paragraph</p>
+    <p class="highlight">Another paragraph.</p>
+    <script>
+        // Selecting elements by class name
+        var elementsByClassName = document.getElementsByClassName("highlight");
+        for (var i = 0; i < elementsByClassName.length; i++) {
+            console.log(elementsByClassName[i].textContent);
+            elementsByClassName[i].style.backgroundColor = 'yellow';
+            
+        }
+    </script>
+</body>
+</html>

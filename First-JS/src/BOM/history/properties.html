@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object Example</title>
+</head>
+<body>
+    <h2>History Object Example</h2>
+    <button onclick="navigateBack()">Go Back</button>
+    <button onclick="navigateForward()">Go Forward</button>
+    <button onclick="navigateByDelta(2)">Go 2 Pages Forward</button>
+
+    <script>
+
+
+ 
+        function navigateBack() {
+            history.back();
+        }
+
+        function navigateForward() {
+            history.forward();
+        }
+
+        function navigateByDelta(delta) {
+            history.go(delta);
+        }
+
+        // Listen for popstate event
+        window.addEventListener('popstate', function(event) {
+            console.log("State changed:", event.state);
+        });
+    </script>
+</body>
+</html>

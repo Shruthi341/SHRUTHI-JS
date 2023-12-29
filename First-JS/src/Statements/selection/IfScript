@@ -1,0 +1,28 @@
+var userDetails = {
+    "Card":"4444555566667890",
+    "Cvv":"8008",
+    "Expiry":"2024"
+}
+
+function verifyCardNumber(){
+    var cardNum = document.getElementById("Card").value;
+    if(cardNum == userDetails.Card){
+        document.getElementById("Cvv").disabled = false;
+        document.getElementById("Cvv").focus();
+    }
+}
+
+function verifyCardCvv(){
+    var cardCvv = document.getElementById("Cvv").value;
+    if(cardCvv == userDetails.Cvv){
+        document.getElementById("Expiry").disabled = false;
+        document.getElementById("Expiry").focus();
+    }
+}
+
+function verifyCardExpiry(){
+    var cardExpiry = document.getElementById("Expiry").value;
+    if(cardExpiry == userDetails.Expiry){ 
+        document.getElementById("btnPay").disabled = false;
+    }
+}

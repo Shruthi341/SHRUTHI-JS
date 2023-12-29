@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topic{
+            width: 200px;
+            box-shadow: 2px 2px 2px black;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .container{
+            display: flex;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        li{
+            margin-right: 100px;
+        }
+
+        .topic:target{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        function fetchClick(){
+            var now = new Date();
+           document.getElementById("viewed").innerHTML += `${location.hash} - ${now.toLocaleTimeString()} <br>`;
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#js">JS</a></li>
+    </ul>
+    <div class="container">
+        <div class="topic" id="html">
+            <h2>HTML</h2>
+            <p>It is a markup langauge</p>
+        </div>
+        <div class="topic" id="css">
+            <h2>CSS</h2>
+            <p>It defines styles for HTML</p>
+        </div>
+        <div class="topic" id="js">
+            <h2>JS</h2>
+            <p>It is a langauge for DOM Manipulation</p>
+        </div>
+    </div>
+
+    <p>
+        <h3>Recently Viewed</h3>
+        <button onclick="fetchClick()">Fetch</button>
+        <p  id="viewed"></p>
+    </p>
+</body>
+</html>

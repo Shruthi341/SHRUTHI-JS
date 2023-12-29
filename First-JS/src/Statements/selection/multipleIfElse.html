@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="multipleIfElse.js"></script>
+</head>
+
+<body class="container-fluid" onload="onLoadUser()">
+    <div class="d-flex justify-content-center align-items-center" style="height: 500px;">
+        <div class="w-25">
+            <h2>Sign In</h2>
+            <div id="userContainer" class="">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Email or mobile number</label>
+                    <div>
+                        <input type="text" id="txtUserId" class="form-control">
+                        <div class="text-danger" id="userError"></div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-warning w-100" onclick="onContinueClick()">Continue</button>
+                </div>
+            </div>
+            <div id="pwdContainer" style="display: none;">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Password</label>
+                    <input type="password" id="txtPwd" class="form-control">
+                    <div class="text-danger" id="pwdError"></div>
+                </div>
+                <div>
+                    <button class="btn btn-warning w-100" onclick="onLoginClick()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
