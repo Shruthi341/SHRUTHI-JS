@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click me" id="elem">
+
+    <script>
+        function handleButtonClick(event) {
+        console.log('Button clicked!');
+        console.log('Event type:', event.type);
+        console.log('Target element:', event.target);
+        console.log('Current target element:', event.currentTarget);
+        console.log('Coordinates (clientX, clientY):', event.clientX, event.clientY);
+        console.log('Event phase:', event.eventPhase);
+        console.log('Bubbles:', event.bubbles);
+        console.log('Cancelable:', event.cancelable);
+        console.log('Is trusted:', event.isTrusted);
+
+        // Prevent the default behavior (e.g., submitting a form or following a link)
+        event.preventDefault();
+        }
+
+        const button = document.getElementById('elem');
+        button.addEventListener('click', handleButtonClick);
+
+    </script>
+</body>
+</html>

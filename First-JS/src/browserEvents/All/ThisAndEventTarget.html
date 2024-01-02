@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this and event.target Attributes</title>
+</head>
+<body>
+
+  <button id="myButton" class="btn">Click me</button>
+
+  <script>
+    function handleClick() {
+      console.log('Using this:');
+      console.log('ID:', this.id);
+      console.log('Class:', this.className);
+      console.log('Text Content:', this.textContent);
+      console.log('----------------------');
+    }
+
+    function handleEventTargetClick(event) {
+      console.log('Using event.target:');
+      console.log('ID:', event.target.id);
+      console.log('Class:', event.target.className);
+      console.log('Text Content:', event.target.textContent);
+      console.log('----------------------');
+    }
+
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', handleClick);
+    button.addEventListener('click', handleEventTargetClick);
+  </script>
+
+</body>
+</html>

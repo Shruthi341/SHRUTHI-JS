@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btnId" value="Click me">
+
+    <script>
+        class Main {
+            handleEvent(event){
+                alert(event.type);
+                console.log("Handle Event any");
+            }
+
+            handleKeyDown(event) {
+                alert('Key down: ' + event.key);
+                console.log("Handle Event key Down");
+            }
+
+            handleKeyUp(event) {
+                alert('Key up: ' + event.key);
+                console.log("Handle Event key Up");
+            }
+        }
+
+        let obj = new Main();
+        btnId.addEventListener('click', obj);
+        // btnId.addEventListener('keydown', obj.handleKeyDown);
+        btnId.addEventListener('keyup', obj.handleKeyUp);
+    </script>
+</body>
+</html>

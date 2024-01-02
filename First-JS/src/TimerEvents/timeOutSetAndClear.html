@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delayed Message Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delayed Message Example</h1>
+    <button onclick="showDelayedMessage()">Show Message</button>
+    <p id="msg"></p>
+
+    <script>
+        var timeoutId;
+        var message = document.getElementById("msg");
+        var counter = 0;
+        function showDelayedMessage() {
+            console.log("message before ",  message.textContent);
+            counter++;
+            clearTimeout(timeoutId);
+            console.log("message clear ",  message.textContent);
+            // Set a new timeout to display the message after a delay
+            timeoutId = setTimeout(function() {
+                message.innerHTML = `My message ${counter}`;
+                console.log("message after -----",  message.textContent);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

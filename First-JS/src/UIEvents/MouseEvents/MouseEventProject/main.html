@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    .thumbnail {
+      width: 100px;
+      height: 50px;
+      margin: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.2);
+    }
+
+    #mainImage {
+      max-width: 300px;
+      max-height: 300px;
+      margin-top: 20px;
+      transition: opacity 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<img src="./images/dress1.jpg" id="mainImage" alt="Main Image">
+
+<div class="thumbnail" onmouseenter="showImage('./images/dress1.jpg')" onmouseleave="resetImage()">Thumbnail 1</div>
+<div class="thumbnail" onmouseenter="showImage('./images/dress2.jpg')" onmouseleave="resetImage()">Thumbnail 2</div>
+<div class="thumbnail" onmouseenter="showImage('./images/dress3.jpg')" onmouseleave="resetImage()">Thumbnail 3</div>
+
+<script>
+  const mainImage = document.getElementById('mainImage');
+
+  function showImage(imageSrc) {
+    mainImage.src = imageSrc;
+    mainImage.style.opacity = 1;
+  }
+
+  function resetImage() {
+    mainImage.style.opacity = 0.5;
+  }
+</script>
+
+</body>
+</html>

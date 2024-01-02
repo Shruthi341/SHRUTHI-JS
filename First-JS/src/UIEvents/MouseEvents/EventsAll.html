@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Example</title>
+  <style>
+    #myElement {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 50px;
+      text-align: center;
+      line-height: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="myElement">Click Me!</div>
+
+<script>
+  const element = document.getElementById('myElement');
+
+  // Click Event
+  element.addEventListener('click', function() {
+    logEvent('Click');
+  });
+
+  // DoubleClick Event
+  element.addEventListener('dblclick', function() {
+    logEvent('DoubleClick');
+  });
+
+  // MouseDown Event
+  element.addEventListener('mousedown', function() {
+    logEvent('MouseDown');
+  });
+
+  // MouseUp Event
+  element.addEventListener('mouseup', function() {
+    logEvent('MouseUp');
+  });
+
+  // MouseMove Event
+  element.addEventListener('mousemove', function() {
+    logEvent('MouseMove');
+  });
+
+  // MouseEnter Event
+  element.addEventListener('mouseenter', function() {
+    logEvent('MouseEnter');
+  });
+
+  // MouseLeave Event
+  element.addEventListener('mouseleave', function() {
+    logEvent('MouseLeave');
+  });
+
+  function logEvent(eventName) {
+    console.log(`Event: ${eventName}`);
+  }
+</script>
+
+</body>
+</html>

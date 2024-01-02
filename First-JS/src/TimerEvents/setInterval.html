@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #timer {
+            font-size: 36px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countdown Timer Example</h1>
+    <div id="timer">Loading...</div>
+
+    <script>
+        // Set the countdown time in seconds
+        var countdownTime = 10;
+
+        // Display initial countdown value
+        document.getElementById('timer').innerText = countdownTime;
+
+        // Update the countdown every second
+        var countdownInterval = setInterval(function() {
+            countdownTime--;
+
+            // Display the updated countdown value
+            document.getElementById('timer').innerText = countdownTime;
+
+            // Check if the countdown has reached zero
+            if (countdownTime === 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('timer').innerText = "Time's up!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

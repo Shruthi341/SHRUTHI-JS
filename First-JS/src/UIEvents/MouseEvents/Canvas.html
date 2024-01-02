@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draw on Canvas</title>
+  <style>
+    #drawingCanvas {
+      border: 1px solid #ccc;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="drawingCanvas" width="500" height="500"></canvas>
+
+<script>
+  const canvas = document.getElementById('drawingCanvas');
+  const context = canvas.getContext('2d');
+  let isDrawing = false;
+
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseleave', stopDrawing);
+
+  function startDrawing(event) {
+    console.log("Mouse Down... started drawing")
+    isDrawing = true;
+    draw(event);
+  }
+
+  function draw(event) {
+    console.log("Mouse Move...")
+    if (!isDrawing) return;
+
+    const x = event.clientX - canvas.offsetLeft;
+    const y = event.clientY - canvas.offsetTop;
+
+    context.lineWidth = 5;
+    context.lineCap = 'round';
+    context.strokeStyle = '#000';
+
+    context.lineTo(x, y);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(x, y);
+  }
+
+  function stopDrawing() {
+    console.log("Mouse Up/leave... stop drawing")
+    isDrawing = false;
+    context.beginPath();
+  }
+</script>
+
+</body>
+</html>
