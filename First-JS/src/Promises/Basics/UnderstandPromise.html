@@ -1,0 +1,21 @@
+<script>
+function fetchDataPromise(url) {
+  return new Promise((resolve, reject) => {
+    if (url === "http://fakestoreapi.com/products") {
+      resolve('Fetched Data Successfully..');
+    } else {
+      reject('Error: Unable to fetch Data.');
+    }
+  });
+}
+
+// Using the fetchDataPromise function
+fetchDataPromise(prompt("Enter URL"))
+  .then((msg) => {
+    document.write(msg);
+  })
+  .catch((msg) => {
+    document.write(msg);
+  });
+
+</script>

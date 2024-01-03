@@ -1,0 +1,73 @@
+{
+  "organization": "TechCorp",
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "position": "Software Engineer",
+      "address": {
+        "street": "123 Main St",
+        "city": "TechCity",
+        "country": "Techland"
+      },
+      "workHistory": [
+        {
+          "company": "SoftTech",
+          "position": "Junior Developer",
+          "startYear": 2015,
+          "endYear": 2018
+        },
+        {
+          "company": "TechCorp",
+          "position": "Software Engineer",
+          "startYear": 2018,
+          "endYear": null
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 28,
+      "position": "UX Designer",
+      "address": {
+        "street": "456 Design St",
+        "city": "DesignVille",
+        "country": "DesignLand"
+      },
+      "workHistory": [
+        {
+          "company": "DesignStudio",
+          "position": "Intern",
+          "startYear": 2016,
+          "endYear": 2017
+        },
+        {
+          "company": "DesignStudio",
+          "position": "Associate Engineer",
+          "startYear": 2017,
+          "endYear": 2023
+        },
+        {
+          "company": "TechCorp",
+          "position": "UX Designer",
+          "startYear": 2023,
+          "endYear": null
+        }
+      ],
+      "skills": [
+        "UI/UX Design",
+        "Sketch",
+        "Figma",
+        "Adobe XD"
+      ]
+    }
+  ]
+}

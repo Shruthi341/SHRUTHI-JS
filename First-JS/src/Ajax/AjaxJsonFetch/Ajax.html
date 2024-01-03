@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>XML Http Request </h2>
+    <button onclick="loadData()">GET JSON</button>
+    <div id="result">
+        Data appears here...
+    </div>
+
+    <script>
+        function loadData(){
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET","Product.json");
+            xhr.send();
+            xhr.onload = function(){
+                if(this.status == 200){
+                    document.getElementById("result").innerHTML = xhr.responseText;
+                    console.log(this.responseText);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

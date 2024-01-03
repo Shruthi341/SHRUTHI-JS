@@ -1,0 +1,15 @@
+<script>
+    function FetchData(url, success, failure){
+        if(url == "http://fakestoreapi.com/products"){
+            success('Fetched Data Successfully..');
+        }else{
+            failure('Error: Unable to fetch Data.');
+        }
+    }
+
+    FetchData(prompt("Enter URL"),
+        (msg)=>{document.write(msg)},
+        (msg)=>{document.write(msg)}
+        )
+
+</script>

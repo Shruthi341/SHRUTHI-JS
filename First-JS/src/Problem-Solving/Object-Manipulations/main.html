@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="accessData.js"></script>
+</head>
+<body onload="onStart()">
+    <div class="d-flex flex-row justify-content-between">
+        <button onclick="AccessInfo()">Basic Info</button>
+        <button onclick="EmployeeWorkHistory()">Employee1 Work History</button>
+        <button onclick="GetPreviousCompanyDetails()"> Emp1 Previous Work History</button>
+        <button onclick="getSoftwareEnginnersList()">Get SoftwareEngineers</button>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <button onclick="getTechlandEmployees()">Techland Employees</button>
+        <button onclick="getAllEmployeesWorkHistory()">All Employees Work History</button>
+
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <button onclick="addNewSkillToEmp1()">Add Skill to Emp1</button>
+        <button onclick="addNewSkillToEmployee()">Add Skill to Given Employee</button>
+        <button onclick="addNewProperty()">Add New Property to Address</button>
+        <button onclick="addNewCompanyDetails()">Add new Company</button>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <button onclick="addNewPropertyToAll()">Add New Property to All Emp Addresses</button>
+        <button onclick="checkSkillExist()">Skill Present?</button>
+        <button onclick="agePresentForEmp1()">Age? Employee1</button>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <button onclick="AllAgeGreaterThanTwenty()">All Above 20 Age?</button>
+        <button onclick="GetAllAgeGreaterThanThirty()">Get Employees above 28</button>
+        <button onclick="anyEmployeeLessThanThirty()">Any Employees Age below 30 </button>
+    </div>
+</body>
+</html>
